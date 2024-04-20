@@ -1,0 +1,63 @@
+<h2 align="center">Student Result</h2>
+<form method="post">
+    <table align="center">
+        <tr>
+            <td>Student Name</td>
+            <td><input type="text" name="sname"></td>
+        </tr>
+        <tr>
+            <td>Subject 1</td>
+            <td><input type="text" name="sub1"></td>
+        </tr>
+        <tr>
+            <td>Subject 2</td>
+            <td><input type="text" name="sub2"></td>
+        </tr>
+        <tr>
+            <td>Subject 3</td>
+            <td><input type="text" name="sub3"></td>
+        </tr>
+        <tr>
+            <td>Subject 4</td>
+            <td><input type="text" name="sub4"></td>
+        </tr>
+        <tr>
+            <td>Subject 5</td>
+            <td><input type="text" name="sub5"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Print"></td>
+        </tr>
+    </table>
+</form>
+
+<table border="1" align="center" cellpadding="3">
+    <th>Name</th>
+    <th>Sub1</th>
+    <th>Sub2</th>
+    <th>Sub3</th>
+    <th>Sub4</th>
+    <th>Sub5</th>
+    <th>Total</th>
+    <th>AVG</th>
+    <th>Result</th>
+    <th>Update</th>
+    <th>Delete</th>
+
+    <% result.forEach(function (user){%>
+        <tr>
+        <td><%= user.name%></td>
+        <td><%= user.sub1%></td>
+        <td><%= user.sub2%></td>
+        <td><%= user.sub3%></td>
+        <td><%= user.sub4%></td>
+        <td><%= user.sub5%></td>
+        <td><%= user.total%></td>
+        <td><%= user.avg%></td>
+        <td><%= user.result%></td>
+        <td><a href="/update/<%= user.id%>">Update</a></td>
+        <td><a href="/delete/<%= user.id%>">Delete</a></td>
+    </tr>
+        <%})%>
+</table>

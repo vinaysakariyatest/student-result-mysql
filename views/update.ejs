@@ -1,0 +1,47 @@
+<% result.forEach(function(user){%>
+    <form method="post">
+        <table align="center">
+            <h2 align="center">Update Result</h2>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" value="<%= user.name%>"></td>
+            </tr>
+            <tr>
+                <td>Subject 1</td>
+                <td><input type="text" name="sub1" value="<%= user.sub1%>"></td>
+            </tr>
+            <tr>
+                <td>Subject 2</td>
+                <td><input type="text" name="sub2" value="<%= user.sub2%>"></td>
+            </tr>
+            <tr>
+                <td>Subject 3</td>
+                <td><input type="text" name="sub3" value="<%= user.sub3%>"></td>
+            </tr>
+            <tr>
+                <td>Subject 4</td>
+                <td><input type="text" name="sub4" value="<%= user.sub4%>"></td>
+            </tr>
+            <tr>
+                <td>Subject 5</td>
+                <td><input type="text" name="sub5" value="<%= user.sub5%>"></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><input type="text" name="total" value="<%= user.total%>" readonly></td>
+            </tr>
+            <tr>
+                <td>AVG</td>
+                <td><input type="text" name="avg" value="<%= user.avg%>" readonly></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="text" name="result" value="<%= user.result%>" readonly></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Update"></td>
+            </tr>
+        </table>
+    </form>
+<%})%>
